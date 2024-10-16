@@ -1,0 +1,60 @@
+@use '../variables';
+
+.infos-bar {
+    padding: 16px 24px;
+    background-color: variables.$textColor;
+    display: flex;
+    flex-wrap: wrap; // Permite que os itens que não cabem na mesma linha sejam movidos para a linha seguinte
+
+    // Definindo a lista como flexível
+    &__infos {
+        display: flex;
+        gap: 40px; // Espaçamento entre os itens da lista
+        flex-grow: 1; // Faz a lista crescer para ocupar o espaço disponível
+
+        &__item {
+            font-size: 14px;
+            color: variables.$secondaryTextColor;
+
+            b {
+                color: variables.$secondaryTextColor;
+                font-size: 18px;
+                display: block;
+            }
+        }
+    }
+
+    @media (max-width: 640px) {
+        display: block; // Em telas menores, colocar o layout em bloco
+        
+        &__infos {
+            display: block; // Coloca os itens da lista em coluna
+            gap: 0; // Remove o gap em telas menores
+
+            &__item {
+                margin-bottom: 16px; // Espaço entre os itens
+            }
+        }
+
+        // Faz o botão ocupar a largura total em telas menores
+        &__button {
+            display: block; // Faz o botão ocupar a largura inteira
+            margin-top: 16px; // Espaço entre a lista e o botão
+            width: 100%; // Faz o botão ocupar a largura completa
+        }
+    }
+
+    // Em telas grandes, o layout permanece flexível (lado a lado)
+    @media (min-width: 1024px) {
+        &__infos {
+            gap: 16px; // Menor espaçamento em telas maiores
+        }
+
+        // Faz o botão ocupar o tamanho correto ao lado da lista em telas grandes
+        &__button {
+            align-self: center; // Centraliza o botão verticalmente
+            margin-left: 20px; // Espaço entre a lista e o botão
+            width: auto; // O botão tem largura automática
+        }
+    }
+}
