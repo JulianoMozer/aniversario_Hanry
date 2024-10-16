@@ -8,15 +8,15 @@
     }
 
     &--ui-ux {
-        background-image: linear-gradient(variables.$color3, variables.$color4);
+        background-image: linear-gradient(variables.$color2, variables.$color3);
     }
 
     &--data-science {
-        background-image: linear-gradient(variables.$color5, variables.$color6);
+        background-image: linear-gradient(variables.$color3, variables.$color4);
     }
 
     &--backend {
-        background-image: linear-gradient(variables.$color7, variables.$color8);
+        background-image: linear-gradient(variables.$color4, variables.$color3);
     }
 
     &--image-left {
