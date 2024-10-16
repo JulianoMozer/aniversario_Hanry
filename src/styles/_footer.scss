@@ -1,0 +1,37 @@
+@use 'variables';
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+   
+    .footer-container {
+      display: flex;
+      justify-content: space-around; /* Alinha os conteúdos no centro e com espaço ao redor */
+      align-items: center;
+      flex-direction: row; /* Organiza os itens em linha horizontal */
+  
+      &__text {
+        font-size: 14px;
+        margin: 0; /* Remove margem para centralizar */
+      }
+  
+      .footer__social-icons {
+        display: flex;
+        justify-content: center; /* Centraliza os ícones */
+        gap: 10px;
+  
+        a {
+          display: inline-block;
+          width: 24px;
+          height: 24px;
+          
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+  

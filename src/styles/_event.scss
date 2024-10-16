@@ -25,7 +25,6 @@
         }
     }
 
-
     .container {
         display: flex;
         gap: 40px;
@@ -44,6 +43,22 @@
 
         &__description {
             line-height: 22px;
+        }
+    }
+
+    &__social-icons {
+        display: flex;
+        gap: 16px; /* Espaçamento entre os ícones */
+        margin-top: 16px; /* Adiciona um espaçamento superior */
+        
+        a img {
+            width: 32px;  /* Largura dos ícones */
+            height: auto; /* Mantém a proporção dos ícones */
+            transition: transform 0.3s ease; /* Transição suave ao passar o mouse */
+            
+            &:hover {
+                transform: scale(1.1); /* Aumenta levemente os ícones ao passar o mouse */
+            }
         }
     }
 
